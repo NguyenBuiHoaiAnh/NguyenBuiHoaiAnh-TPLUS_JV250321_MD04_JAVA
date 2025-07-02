@@ -3,19 +3,19 @@ public class Main {
         Product[] products = new Product[100];
         int curr = 0;
 
-        products[curr++] = new Product("Milk",100);
-        products[curr++] = new Product("Apple",200);
+        products[curr++] = new Product("Milk", 100);
+        products[curr++] = new Product("Apple", 200);
         products[curr++] = new Product("Orange", 300);
 
-        double total = calculationTotal(products,curr);
+        double total = calculationTotal(products, curr);
         double tax = calculationTax(total);
-        double final
+        double finalAmount = calculationFinalAmount(total, tax);
 
-
+        printInvoice(products, curr, total, tax, finalAmount);
 
     }
 
-    public static double calculationTotal(Product[] products, int curr){
+    public static double calculationTotal(Product[] products, int curr) {
         double total = 0;
         for (int i = 0; i < curr; i++) {
             total += products[i].getPrice();
@@ -23,11 +23,11 @@ public class Main {
         return total;
     }
 
-    public static double calculationTax(double total){
+    public static double calculationTax(double total) {
         return total + 0.1;
     }
 
-    public static double calculateFinalAmount(double total, double tax) {
+    public static double calculationFinalAmount(double total, double tax) {
         return total + tax;
     }
 
