@@ -39,6 +39,7 @@ public class Person<T> {
     }
 
     public void display(){
+        System.out.println("Danh sách người dùng:");
         System.out.printf("Name: %s\nEmail: %s\nPhone: %s\n", this.name, this.email, this.phone);
     }
 }
