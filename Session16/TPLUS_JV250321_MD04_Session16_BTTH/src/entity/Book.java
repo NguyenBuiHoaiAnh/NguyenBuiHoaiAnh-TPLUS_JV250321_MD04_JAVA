@@ -3,7 +3,7 @@ package entity;
 import java.util.Scanner;
 
 public class Book {
-    private int book_id;
+    private String bookId;
     private String bookName;
     private String bookTitle;
     private int bookPages;
@@ -16,8 +16,8 @@ public class Book {
     public Book() {
     }
 
-    public Book(int book_id, String bookName, String bookTitle, int bookPages, String bookAuthor, float bookPrice, int typeId, boolean bookStatus) {
-        this.book_id = book_id;
+    public Book(String bookId, String bookName, String bookTitle, int bookPages, String bookAuthor, float bookPrice, int typeId, boolean bookStatus) {
+        this.bookId = bookId;
         this.bookName = bookName;
         this.bookTitle = bookTitle;
         this.bookPages = bookPages;
@@ -28,12 +28,12 @@ public class Book {
     }
 
     // --------------------------------------------------------
-    public int getBook_id() {
-        return book_id;
+    public String getBookId() {
+        return bookId;
     }
 
-    public void setBook_id(int book_id) {
-        this.book_id = book_id;
+    public void setBookId(String bookId) {
+        this.bookId = bookId;
     }
 
     public String getBookName() {
@@ -102,14 +102,11 @@ public class Book {
 
     // -----------------------------------------------------------
 
-    public void inputData(Scanner scanner){
-
-    }
 
     @Override
     public String toString() {
-        return String.format("ID: %d, Name: %s, Title: %s, Pages: %d, " +
-                             "Author: %s, Price: %.2f, TypeId: %d, Status: %b"
-        ,this.book_id,this.bookName,this.bookTitle,this.bookPages,this.bookAuthor,this.bookPrice,this.typeId,this.bookStatus);
+        return String.format("ID: %s, Name: %s, Title: %s, Pages: %d\n" +
+                             "Author: %s, Price: %.2f, TypeId: %d, Status: %s\n"
+        ,this.bookId,this.bookName,this.bookTitle,this.bookPages,this.bookAuthor,this.bookPrice,this.typeId,this.bookStatus?"Hoạt động":"Không hoạt động");
     }
 }

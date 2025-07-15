@@ -52,9 +52,6 @@ public class BookType {
     }
     // -------------------------------------------------------------
 
-    public void inputData(Scanner scanner){
-
-    }
 
     @Override
     public String toString() {

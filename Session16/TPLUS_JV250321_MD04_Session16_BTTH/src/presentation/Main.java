@@ -20,10 +20,10 @@ public class Main {
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
-                    bookManagement.bookManagement(scanner);
+                    bookTypeManagement.bookTypeManagement(scanner);
                     break;
                 case 2:
-                    bookTypeManagement.bookTypeManagement(scanner);
+                    bookManagement.bookManagement(scanner);
                     break;
                 case 3:
                     System.exit(0);
