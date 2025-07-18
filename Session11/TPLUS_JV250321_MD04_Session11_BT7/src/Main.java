@@ -1,7 +1,5 @@
-package presentation;
-
 import business.ManageImp;
-import entity.Order;
+import entity.Invoice;
 
 import java.util.Scanner;
 
@@ -37,7 +35,7 @@ public class Main {
 
                     }
 
-                    manager.add(new Order(code, amount));
+                    manager.add(new Invoice(code, amount));
                     System.out.println("Hóa đơn đã được thêm thành công.");
                     break;
 
@@ -67,7 +65,7 @@ public class Main {
                         System.out.println("Vui lòng nhập số thực >= 0 !");
                     }
 
-                    manager.update(updateId, new Order(newCode, newAmount));
+                    manager.update(updateId, new Invoice(newCode, newAmount));
                     System.out.println("Hóa đơn đã được sửa thành công.");
                     break;
 
