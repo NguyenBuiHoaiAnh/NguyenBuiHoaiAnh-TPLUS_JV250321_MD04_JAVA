@@ -17,10 +17,10 @@ public class Main {
 
         // Nhập giá trị cho mảng theo từng hàng
         System.out.println("Nhập giá trị cho từng phần tử của mảng:");
-        for (int i = 0; i < rows; i++) {
+        for (int i = 0; i < arr.length; i++) {
             System.out.printf("Hàng %d: ", i + 1);
             for (int j = 0; j < cols; j++) {
-                arr[i][j] = Integer.parseInt(sc.nextLine());
+                arr[i][j] = sc.nextInt();
             }
         }
         System.out.println("Mảng khởi tạo: ");
