@@ -8,8 +8,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String email = sc.nextLine().trim();
 
-//       String emailRegex = "^[a-zA-Z0-9.-]@[a-zA-Z0-9.-]\\.[a-zA-Z]{2,6}$";
-        String emailRegex = "^[\\w.-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
+       String emailRegex = "^[a-zA-Z0-9.-]{6,}@[a-zA-Z0-9]{3,}\\.[a-zA-Z]{2,6}$";
+//        String emailRegex = "^[\\w.-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
 
         if (Pattern.matches(emailRegex, email)) {
             System.out.println("Email hợp lệ");
