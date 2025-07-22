@@ -14,5 +14,8 @@ public interface ProductBusiness {
 
     boolean addProduct(Product product);
 
-    //
+    // Update Product
+    Product findProductById(int id);
+
+    boolean updateProduct(Product product);
 }

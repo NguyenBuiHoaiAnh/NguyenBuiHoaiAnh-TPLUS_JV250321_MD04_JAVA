@@ -21,6 +21,8 @@ public class ProductBusinessImp implements ProductBusiness {
         return productDAO.findAll();
     }
 
+
+    // Add Product
     @Override
     public boolean checkProduct(String name) {
         return productDAO.checkProduct(name);
@@ -29,6 +31,18 @@ public class ProductBusinessImp implements ProductBusiness {
     @Override
     public boolean addProduct(Product product) {
         return productDAO.addProduct(product);
+    }
+
+
+    // Update Product
+    @Override
+    public Product findProductById(int id) {
+        return productDAO.findProductById(id);
+    }
+
+    @Override
+    public boolean updateProduct(Product product) {
+        return productDAO.updateProduct(product);
     }
 
 

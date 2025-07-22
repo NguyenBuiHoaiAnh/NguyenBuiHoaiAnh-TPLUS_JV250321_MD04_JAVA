@@ -14,5 +14,8 @@ public interface ProductDAO {
 
     boolean addProduct(Product product);
 
-    //
+    // Update Product
+    Product findProductById(int productId);
+
+    boolean updateProduct(Product product);
 }
